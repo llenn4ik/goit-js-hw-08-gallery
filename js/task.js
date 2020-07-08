@@ -37,7 +37,7 @@ galleryImagesList.addEventListener('click', event => {
   event.preventDefault();
   lightbox.classList.add('is-open');
   changeImgSrc(event.target);
-  console.log('+++++++')
+  // console.log('+++++++')
 });
 
 function changeImgSrc(el) {
@@ -48,7 +48,7 @@ function closeModalWindow() {
   lightbox.classList.remove('is-open');
 
   lightbox_img.setAttribute('src', '');
-  console.log('-+-+-')
+  // console.log('-+-+-')
 };
 // слушатель на overlay, esc, button:
 const overlay = document.querySelector('.lightbox__overlay');
@@ -66,7 +66,6 @@ function handleOverlayCloseWindow({
   console.log("currentTarget", currentTarget);
   if (target === currentTarget) {
     closeModalWindow();
-    console.log('---')
   }
 };
 window.addEventListener('keydown', handleEsc)
@@ -91,6 +90,6 @@ function handleButton({
 
 
     closeModalWindow();
-    console.log('click')
+
   }
 };
